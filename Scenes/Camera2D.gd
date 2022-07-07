@@ -28,4 +28,4 @@ func _process(delta):
 		
 	else:
 		zoom = zoom.move_toward(Vector2(1,1),0.03)
-		position = position.move_toward(center,70)
+		position = position.move_toward(center,80)
