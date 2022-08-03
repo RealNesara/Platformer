@@ -315,7 +315,7 @@ position = Vector2( 377, 150 )
 position = Vector2( 1160, 69 )
 
 [node name="Area2D6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1016, 660 )
+position = Vector2( 1015, 660 )
 
 [node name="Area2D7" parent="." instance=ExtResource( 5 )]
 position = Vector2( 519, 629 )
@@ -324,14 +324,14 @@ position = Vector2( 519, 629 )
 position = Vector2( 603, 36 )
 
 [node name="Area2D9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 374, 645 )
+position = Vector2( 375, 645 )
 
 [node name="Area2D10" parent="." instance=ExtResource( 5 )]
 position = Vector2( 721, 523 )
 rotation = -3.14159
 
 [node name="Area2D11" parent="." instance=ExtResource( 5 )]
-position = Vector2( 762, 523 )
+position = Vector2( 754, 523 )
 rotation = -3.14159
 
 [node name="Area2D12" parent="." instance=ExtResource( 5 )]
@@ -367,6 +367,86 @@ position = Vector2( 1065, 317 )
 
 [node name="SavePoint2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1127, 342 )
+
+[node name="SavePoint3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1079, 454 )
+
+[node name="SavePoint4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 770, 214 )
+
+[node name="SavePoint5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 349, 550 )
+
+[node name="SavePoint6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 744, 598 )
+
+[node name="Area2D18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 762, 600 )
+rotation = 1.5708
+
+[node name="Area2D19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 456, 668 )
+rotation = -3.1189
+
+[node name="Area2D20" parent="." instance=ExtResource( 5 )]
+position = Vector2( 440, 668 )
+rotation = -3.1189
+
+[node name="Area2D21" parent="." instance=ExtResource( 5 )]
+position = Vector2( 423, 668 )
+rotation = -3.1189
+
+[node name="Area2D22" parent="." instance=ExtResource( 5 )]
+position = Vector2( 491, 152 )
+rotation = 1.59349
+
+[node name="Area2D23" parent="." instance=ExtResource( 5 )]
+position = Vector2( 851, 523 )
+rotation = -3.13636
+
+[node name="Area2D24" parent="." instance=ExtResource( 5 )]
+position = Vector2( 819, 523 )
+rotation = -3.13636
+
+[node name="Area2D25" parent="." instance=ExtResource( 5 )]
+position = Vector2( 787, 523 )
+rotation = -3.13636
+
+[node name="Area2D26" parent="." instance=ExtResource( 5 )]
+position = Vector2( 244, 633 )
+rotation = -1.56556
+
+[node name="Area2D27" parent="." instance=ExtResource( 5 )]
+position = Vector2( 228, 616 )
+rotation = -1.56556
+
+[node name="Area2D28" parent="." instance=ExtResource( 5 )]
+position = Vector2( 260, 648 )
+rotation = -1.56556
+
+[node name="Area2D29" parent="." instance=ExtResource( 5 )]
+position = Vector2( 135, 587 )
+rotation = 3.14159
+
+[node name="Area2D30" parent="." instance=ExtResource( 5 )]
+position = Vector2( 119, 587 )
+rotation = 3.14159
+
+[node name="Area2D31" parent="." instance=ExtResource( 5 )]
+position = Vector2( 103, 587 )
+rotation = 3.14159
+
+[node name="Area2D32" parent="." instance=ExtResource( 5 )]
+position = Vector2( 183, 603 )
+rotation = 3.14159
+
+[node name="Area2D33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 199, 603 )
+rotation = 3.14159
+
+[node name="Area2D34" parent="." instance=ExtResource( 5 )]
+position = Vector2( 167, 603 )
+rotation = 3.14159
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -1, 0 )
