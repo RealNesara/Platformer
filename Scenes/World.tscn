@@ -304,6 +304,9 @@ position = Vector2( -1.52588e-05, -192 )
 [node name="Spinning Blade" parent="." instance=ExtResource( 7 )]
 position = Vector2( 929, 174 )
 
+[node name="AnimationPlayer" parent="Spinning Blade" index="0"]
+autoplay = "Spin"
+
 [node name="Path2D" parent="Spinning Blade" index="1"]
 position = Vector2( -1, 0 )
 
@@ -312,6 +315,7 @@ position = Vector2( 269, 161 )
 
 [node name="AnimationPlayer" parent="Spinning Blade2" index="0"]
 root_node = NodePath("../../Spinning Blade2")
+autoplay = "Spin"
 anims/RESET = SubResource( 21 )
 anims/Spin = SubResource( 22 )
 

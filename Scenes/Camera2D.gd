@@ -12,6 +12,10 @@ var center = Vector2.ZERO
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	center = get_viewport_rect(). size/2
+	target = owner.get_node("Player")
+	#### ADD THESE FOR INSTANT ZOOM
+	position = target.global_position
+	zoom = Vector2(.3,.3)
 
 func _process(delta):
 	if Input.is_action_just_pressed("zoom"):
