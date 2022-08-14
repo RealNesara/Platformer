@@ -1,7 +1,7 @@
 extends Camera2D
 
 var target = null
-var zoomed = false
+var zoomed = true
 var center = Vector2.ZERO
 
 # Declare member variables here. Examples:
