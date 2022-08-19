@@ -1,6 +1,6 @@
 extends Node2D
 onready var arrow = $Arrow
-var arrow_speed = 175
+export (int) var arrow_speed = 175
 
 
 
