@@ -8,6 +8,9 @@ func reset():
 	get_tree().reload_current_scene()
 	game_start_time = OS.get_ticks_msec()
 
+func set_time():
+	game_start_time = OS.get_ticks_msec()
+
 func check_reset():
 	if current_spawn == null:
 		reset()

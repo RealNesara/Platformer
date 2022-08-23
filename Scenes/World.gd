@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	pass 
+	GameStats.set_time() 
 
 func _process(delta):
 
