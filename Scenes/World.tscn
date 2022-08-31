@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tileset.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Sprites/Tiles/tileset.png" type="Texture" id=14]
 [ext_resource path="res://Scenes/Background_music.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Lava.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/WinZone.gd" type="Script" id=17]
 
 [sub_resource type="Animation" id=21]
 length = 0.001
@@ -271,6 +272,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 size = 29
 font_data = ExtResource( 11 )
 
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 22, 8 )
+
 [node name="World" type="Node2D"]
 script = ExtResource( 9 )
 
@@ -280,7 +284,7 @@ scale = Vector2( 4.97656, 4.00556 )
 texture = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 53, 48 )
+position = Vector2( 57, 41 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -312,10 +316,10 @@ position = Vector2( -208, 318 )
 position = Vector2( 351, 95 )
 
 [node name="Lava9" parent="LAVA" instance=ExtResource( 16 )]
-position = Vector2( 704, 206 )
+position = Vector2( 703, 206 )
 
 [node name="Lava10" parent="LAVA" instance=ExtResource( 16 )]
-position = Vector2( 720, 206 )
+position = Vector2( 719, 206 )
 
 [node name="Lava14" parent="LAVA" instance=ExtResource( 16 )]
 position = Vector2( 240, -114 )
@@ -326,8 +330,11 @@ position = Vector2( 768, 206 )
 [node name="Lava15" parent="LAVA" instance=ExtResource( 16 )]
 position = Vector2( 208, -114 )
 
+[node name="Lava" parent="LAVA" instance=ExtResource( 16 )]
+position = Vector2( 95, 414 )
+
 [node name="Lava11" parent="LAVA" instance=ExtResource( 16 )]
-position = Vector2( 736, 206 )
+position = Vector2( 735, 206 )
 
 [node name="Lava16" parent="LAVA" instance=ExtResource( 16 )]
 position = Vector2( 224, -114 )
@@ -343,6 +350,9 @@ position = Vector2( 239, -1 )
 
 [node name="Lava19" parent="LAVA" instance=ExtResource( 16 )]
 position = Vector2( 255, -1 )
+
+[node name="Lava6" parent="LAVA" instance=ExtResource( 16 )]
+position = Vector2( 111, 414 )
 
 [node name="Spike_trap" type="Node2D" parent="."]
 
@@ -440,17 +450,14 @@ rotation = 1.5708
 [node name="Area2D19" parent="Spike_trap" instance=ExtResource( 5 )]
 position = Vector2( 456, 668 )
 rotation = -3.1189
-scale = Vector2( 1, 1 )
 
 [node name="Area2D20" parent="Spike_trap" instance=ExtResource( 5 )]
 position = Vector2( 440, 668 )
 rotation = -3.1189
-scale = Vector2( 1, 1 )
 
 [node name="Area2D21" parent="Spike_trap" instance=ExtResource( 5 )]
 position = Vector2( 423, 668 )
 rotation = -3.1189
-scale = Vector2( 1, 1 )
 
 [node name="Area2D22" parent="Spike_trap" instance=ExtResource( 5 )]
 position = Vector2( 491, 152 )
@@ -459,17 +466,14 @@ rotation = 1.59349
 [node name="Area2D23" parent="Spike_trap" instance=ExtResource( 5 )]
 position = Vector2( 851, 523 )
 rotation = -3.13636
-scale = Vector2( 1, 1 )
 
 [node name="Area2D24" parent="Spike_trap" instance=ExtResource( 5 )]
 position = Vector2( 819, 523 )
 rotation = -3.13636
-scale = Vector2( 1, 1 )
 
 [node name="Area2D25" parent="Spike_trap" instance=ExtResource( 5 )]
 position = Vector2( 787, 523 )
 rotation = -3.13636
-scale = Vector2( 1, 1 )
 
 [node name="Area2D26" parent="Spike_trap" instance=ExtResource( 5 )]
 position = Vector2( 244, 633 )
@@ -667,8 +671,6 @@ text = "00:00:00"
 [node name="RopeSwing" parent="." instance=ExtResource( 13 )]
 position = Vector2( 330, 354 )
 
-[node name="AudioStreamPlayer" parent="." instance=ExtResource( 15 )]
-
 [node name="Spike_spitter" type="Node2D" parent="."]
 
 [node name="SpikeSpitter3" parent="Spike_spitter" instance=ExtResource( 12 )]
@@ -700,6 +702,18 @@ position = Vector2( 538, 504 )
 
 [node name="SpikeSpitter8" parent="Spike_spitter" instance=ExtResource( 12 )]
 position = Vector2( 682, 409 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 15 )]
+
+[node name="Area2D" type="Area2D" parent="." groups=["Win"]]
+script = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Win"]]
+position = Vector2( 47, 636 )
+shape = SubResource( 26 )
+
+[connection signal="area_entered" from="Area2D" to="Player" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 
 [editable path="Door_Button/Door and Button2"]
 [editable path="Door_Button/Door and Button"]

@@ -26,12 +26,14 @@ margin_bottom = 30.0
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 margin_right = 400.0
 margin_bottom = 20.0
+custom_colors/font_color = Color( 0, 1, 0.27451, 1 )
 text = "Start"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 margin_top = 24.0
 margin_right = 400.0
 margin_bottom = 44.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
