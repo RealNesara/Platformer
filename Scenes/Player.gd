@@ -105,6 +105,7 @@ func _on_Deathzone_area_entered(area):
 	if area.is_in_group("Deadly"):
 		if GameStats.check_reset() == false:
 			global_position = GameStats.get_spawn().global_position
+			$"../AudioStreamPlayer2D".play()
 
 
 func _on_GrabZone_area_entered(area):
