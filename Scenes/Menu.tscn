@@ -36,5 +36,14 @@ margin_bottom = 44.0
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "Quit"
 
+[node name="Label" type="Label" parent="."]
+margin_left = 482.0
+margin_top = 280.0
+margin_right = 799.0
+margin_bottom = 330.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Watch out for Fake Blocks and Traps when playing!
+                                Have fun :)"
+
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
