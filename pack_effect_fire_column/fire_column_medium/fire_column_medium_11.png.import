@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/burning_loop_1.png-9ce387eafbf9fcd99720d5cdbbee5dae.stex"
+path="res://.import/fire_column_medium_11.png-f40af121c76501c841a4854bc05a4eb1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://burning_loop_1.png"
-dest_files=[ "res://.import/burning_loop_1.png-9ce387eafbf9fcd99720d5cdbbee5dae.stex" ]
+source_file="res://pack_effect_fire_column/fire_column_medium/fire_column_medium_11.png"
+dest_files=[ "res://.import/fire_column_medium_11.png-f40af121c76501c841a4854bc05a4eb1.stex" ]
 
 [params]
 
