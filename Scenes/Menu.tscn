@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Other/GAmeBack ground.jpg" type="Texture" id=2]
+[ext_resource path="res://Other/RobotoMono-BoldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Other/crackman.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -25,25 +36,28 @@ margin_bottom = 30.0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 margin_right = 400.0
-margin_bottom = 20.0
+margin_bottom = 26.0
 custom_colors/font_color = Color( 0, 1, 0.27451, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "Start"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 24.0
+margin_top = 30.0
 margin_right = 400.0
-margin_bottom = 44.0
+margin_bottom = 56.0
 custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Quit"
 
 [node name="Label" type="Label" parent="."]
-margin_left = 482.0
-margin_top = 280.0
-margin_right = 799.0
-margin_bottom = 330.0
+margin_left = 426.0
+margin_top = 230.0
+margin_right = 867.0
+margin_bottom = 280.0
 custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Watch out for Fake Blocks and Traps when playing!
-                                Have fun :)"
+                    Have fun :)"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
