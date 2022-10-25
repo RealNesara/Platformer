@@ -1079,6 +1079,7 @@ position = Vector2( 330, 393 )
 
 [node name="SpikeSpitter6" parent="Spike_spitter" instance=ExtResource( 12 )]
 position = Vector2( 522, 313 )
+arrow_speed = 100
 
 [node name="SpikeSpitter7" parent="Spike_spitter" instance=ExtResource( 12 )]
 position = Vector2( 538, 504 )
